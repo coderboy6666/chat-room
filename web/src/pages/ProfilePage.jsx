@@ -11,6 +11,7 @@ import { Camera, User, Mail } from 'lucide-react';
 const ProfilePage = () => {
     const {auth, isUpdateProfile, updateProfile} = useAuthStore();
     const [selectPhoto, setSelectPhoto] = useState(null);
+    console.log(auth)
     /**
      * 1、获取photo
      * 2、将photo转化为64base
@@ -96,7 +97,7 @@ const ProfilePage = () => {
                         <div className="space-y-3 text-sm">
                             <div className="flex items-center justify-between py-2 border-b border-zinc-700">
                                 <span>Member Since</span>
-                                <span>{auth.createdAt?.split("T")[0]}</span>
+                                <span>{auth.createAt?.split("T")[0]}</span>
                             </div>
                             <div className="flex items-center justify-between py-2">
                                 <span>Account Status</span>
