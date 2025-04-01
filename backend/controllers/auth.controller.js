@@ -59,8 +59,8 @@ export const loginController = async (req, res) => {
             name: user.name,
             email: user.email,
             photo: user.photo,
-            createAt: user.createdAt,
-            updateAt: user.updatedAt
+            createdAt: user.createdAt,
+            updatedAt: user.updatedAt
         })
     } catch(error) {
         res.status(500).json({ message: "服务器异常!!" });
